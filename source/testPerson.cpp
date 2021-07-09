@@ -1,4 +1,4 @@
-#include "Person.hpp"
+#include "include/Person.hpp"
 
 int main(int argc, char *argv[])
 {
