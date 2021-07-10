@@ -10,10 +10,12 @@ class Person
         std::string lastName;
         int arbitraryNumber;
     public:
-        std::string getName();
         Person(std::string first, std::string last, int arbitrary);
         Person();
         ~Person();
+        std::string getName() const;
+        int getNumber() const {return arbitraryNumber;}
+        void setNumber(int n){arbitraryNumber = n;}
 };
 
 #endif // __PERSON_H__

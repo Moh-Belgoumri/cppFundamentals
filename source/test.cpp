@@ -12,6 +12,8 @@ int main(int argc, char *argv[])
         std::cout << "Exiting inner block" << std::endl;
     }
     std::cout << "After innermost block" << " " << std::endl;
-    std::string name = p1.getName();
+    std::cout << "p1: " << p1.getName() << " " << p1.getNumber() << std::endl;
+    p1.setNumber(1000);
+    std::cout << "p1: " << p1.getName() << " " << p1.getNumber() << std::endl;
     return EXIT_SUCCESS;
 }
