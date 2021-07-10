@@ -10,20 +10,18 @@ int main(int argc, char *argv[])
     cout << "Enter a number" << endl;
     cin >> x;
     bool isPrime = true;
-    int factor = 2;
-    while (factor <= sqrt(x))
+    for (int factor = 2; factor <= sqrt(x); factor++)
+    {
+        int quotient = x / factor;
+        if (factor * quotient == x)
         {
-            int quotient = x / factor;
-            if (factor * quotient == x)
-            {
-                cout << "Found factorization " << factor << " * " << quotient << endl;
-                isPrime = false;
-                break;
-            } 
-            factor++;
+            cout << "Found factorization " << factor << " * " << quotient << endl;
+            isPrime = false;
+            break;
         } 
+    } 
         cout << x;
-        if(isPrime) cout << " is a prime number" << endl;
+        if (isPrime) cout << " is a prime number" << endl;
         else cout << " is not a prime number" << endl;
     return EXIT_SUCCESS;
 }
