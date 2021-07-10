@@ -7,21 +7,31 @@ using std::cin;
 int main(int argc, char *argv[])
 {
     int x;
-    cout << "Enter a number" << endl;
+    cout << "Enter a number, 0 or negative to exit" << endl;
     cin >> x;
-    bool isPrime = true;
-    for (int factor = 2; factor <= sqrt(x); factor++)
+    
+    while (x > 0)
     {
-        int quotient = x / factor;
-        if (factor * quotient == x)
+        switch (x)
         {
-            cout << "Found factorization " << factor << " * " << quotient << endl;
-            isPrime = false;
-            break;
-        } 
-    } 
-        cout << x;
-        if (isPrime) cout << " is a prime number" << endl;
-        else cout << " is not a prime number" << endl;
+            case 1:
+                cout << "You entered 1" << endl;
+                break;
+            case 2:
+            case 3: 
+                cout << "You entered 2 or 3" << endl;
+                break;
+            case 4:
+                cout << "You entered 4" << endl;
+            case 5:
+                cout << "You entered 5" << endl;
+                break;
+            default:
+                cout << "You entered something else" << endl;
+                break;
+        }
+        cout << "Enter a number, 0 or negative to exit" << endl;
+        cin >> x;
+    }
     return EXIT_SUCCESS;
 }
