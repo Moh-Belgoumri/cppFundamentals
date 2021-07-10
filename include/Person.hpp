@@ -16,6 +16,10 @@ class Person
         std::string getName() const;
         int getNumber() const {return arbitraryNumber;}
         void setNumber(int n){arbitraryNumber = n;}
+        bool operator < (Person const& p) const;
+        bool operator < (int n) const;
 };
+
+bool operator < (int n, Person const& p);
 
 #endif // __PERSON_H__
