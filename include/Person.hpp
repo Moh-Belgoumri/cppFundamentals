@@ -1,3 +1,6 @@
+#ifndef __PERSON_H__
+#define __PERSON_H__
+
 #include <bits/stdc++.h>
 
 class Person
@@ -12,3 +15,5 @@ class Person
         Person();
         ~Person();
 };
+
+#endif // __PERSON_H__
