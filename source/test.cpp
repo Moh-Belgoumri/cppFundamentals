@@ -1,22 +1,18 @@
-#include "include/Person.hpp"
-#include "include/Tweeter.hpp"
-#include "include/Status.hpp"
+#include <bits/stdc++.h>
+using std::cout;
+using std::endl;
+using std::cin;
 
 int main(int argc, char *argv[])
 {
-    Person p1("Mohammed", "Belgoumri", 21); 
-    {
-        std::cout << "Entering inner block" << std::endl;
-        Tweeter t1("Fatima", "Belgoumri", 18, "@fatiBelgou");
-        std::string name = t1.getName();
-        std::cout << "Exiting inner block" << std::endl;
-    }
-    std::cout << "After innermost block" << " " << std::endl;
-    std::string name = p1.getName();
-    Status s = PENDING;
-    FileError fe = FileError::NOTFOUND;
-    fe = FileError::OK;
-    NetworkError ne = NetworkError::NOTFOUND;
-    ne = NetworkError::OK;
+    int x, y;
+    cout << "Enter two numbers" << endl;
+    cin >> x >> y;
+    cout << x << " ";
+
+    if (x > y) cout << "is lareger than ";
+    else cout << "is not lareger than ";
+    cout << y << endl;
+    if (x + y > 10) cout << "Thanks for choosing larger numbers" << endl; 
     return EXIT_SUCCESS;
 }
